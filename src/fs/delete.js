@@ -1,8 +1,8 @@
 import fs from 'node:fs'
 
 const remove = async () => {
-  fs.unlink('fileToRemove.txt');
-  if (fs.existsAsync('fileToRemove.txt'))
+  fs.unlinkSync('fileToRemove.txt');
+  if (fs.existsSync('fileToRemove.txt'))
 throw new Error('FS operation failed');
   
 };
